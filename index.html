@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz</title>
+
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="stylesheet" href="first.css">
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>Quiz: CRICKET GEEKS</h1>
+    <div id="timer">Time Remaining: <span id="time">60</span> seconds</div>
+
+    <form id="quiz-form">
+      <div class="question" id="question-1">
+        <p>1. How many centuries has Virat Kohli scored in One Day Internationals?</p>
+        <label><input type="radio" name="q1" value="a"> 49</label><br>
+        <label><input type="radio" name="q1" value="b"> 50</label><br>
+        <label><input type="radio" name="q1" value="c"> 51</label><br>
+      </div>
+
+      <div class="question" id="question-2" style="display: none;">
+        <p>2. "E sala cup namde" is associated with which IPL team?</p>
+        <label><input type="radio" name="q2" value="a"> Royal Challengers Bangalore</label><br>
+        <label><input type="radio" name="q2" value="b"> Mumbai Indians</label><br>
+        <label><input type="radio" name="q2" value="c"> Kolkata Knight Riders</label><br>
+      </div>
+
+      <div class="question" id="question-3" style="display: none;">
+        <p>3. Which IPL team was banned for two years?</p>
+        <label><input type="radio" name="q3" value="a"> CSK</label><br>
+        <label><input type="radio" name="q3" value="b"> RCB</label><br>
+        <label><input type="radio" name="q3" value="c"> MI</label><br>
+      </div>
+     
+      <div class="question" id="question-4" style="display: none;">
+        <p>4. IPL was started in which year?</p>
+        <label><input type="radio" name="q4" value="a"> 2007</label><br>
+        <label><input type="radio" name="q4" value="b"> 2006</label><br>
+        <label><input type="radio" name="q4" value="c"> 2008</label><br>
+      </div>
+
+      <div class="question" id="question-5" style="display: none;">
+        <p>5. Highest run scorer among the following?</p>
+        <label><input type="radio" name="q5" value="a"> David Warner</label><br>
+        <label><input type="radio" name="q5" value="b"> Virat Kohli</label><br>
+        <label><input type="radio" name="q5" value="c"> Ben Stokes</label><br>
+      </div>
+
+      <div class="question" id="question-6" style="display: none;">
+        <p>6. Biggest Cricket Stadium in which country?</p>
+        <label><input type="radio" name="q6" value="a"> Australia</label><br>
+        <label><input type="radio" name="q6" value="b"> New Zealand</label><br>
+        <label><input type="radio" name="q6" value="c"> India</label><br>
+      </div>
+
+      <div class="question" id="question-7" style="display: none;">
+        <p>7. Who is known as God of Cricket?</p>
+        <label><input type="radio" name="q7" value="a"> Sachin Tendulkar</label><br>
+        <label><input type="radio" name="q7" value="b"> Viv Richards</label><br>
+        <label><input type="radio" name="q7" value="c"> Shane Watson</label><br>
+      </div>
+
+      <div class="question" id="question-8" style="display: none;">
+        <p>8. Who is the Universe Boss of Cricket?</p>
+        <label><input type="radio" name="q8" value="a"> Rohit Sharma</label><br>
+        <label><input type="radio" name="q8" value="b"> Chris Gayle</label><br>
+        <label><input type="radio" name="q8" value="c"> Ben Stokes</label><br>
+      </div>
+
+
+      <div id="navigation-buttons">
+        <button type="button" id="previous-btn" onclick="navigateQuestion(-1)">Previous</button>
+        <button type="button" id="next-btn" onclick="navigateQuestion(1)">Next</button>
+      </div>
+
+      <button type="button" id="submit-btn" onclick="showresults()">Submit</button>
+    </form>
+  </div>
+
+  <div id="results-container" class="hidden">
+    <h1>Quiz Results</h1>
+    <p id="score"></p>
+    <p><button onclick="window.location.reload();">Retry</button></p>
+  </div>
+
+  <script src="first.js"></script>
+</body>
+</html>
